@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Mover : MonoBehaviour
 {
 
     // Serialize field allows you to change the values in unity while the game is playing
     [SerializeField] float moveSpeed = 10f;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,7 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
+
         MovePlayer();
     }
 
@@ -27,6 +30,7 @@ public class Mover : MonoBehaviour
         Debug.Log("use the arrow keys or WASD to move the player around");
         Debug.Log("your objective is to run around the obstacle course without hitting anything");
         Debug.Log("hitting anything will result in losing the game");
+
     }
 
     //this method makes the object move with the arrow keys or WASD keys

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scorer : MonoBehaviour
 {
-    int hits = 0;
+    int hits = 4;
 
    
     private void OnCollisionEnter(Collision other) 
@@ -12,8 +12,11 @@ public class Scorer : MonoBehaviour
         //if the objects tag doesn't equal Hit
         if(other.gameObject.tag != "Hit")
         {
-            hits = hits + 1;
-            Debug.Log("You've bumped into a thing this many times: " + hits);
+            hits--;
+            Debug.Log("You have  " + hits + " life points");
+        }
+        if(hits == 0){
+            Debug.Log("You lost the game");
         }
         
     }
