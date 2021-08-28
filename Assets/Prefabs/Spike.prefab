@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1613308870953886071}
   - component: {fileID: 1613308870953886070}
   - component: {fileID: 1613308870953886059}
-  - component: {fileID: 1613308870953886056}
+  - component: {fileID: 187539099}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Player
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57dcec7cc8ac90e4eab029f0f90af8a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 7
 --- !u!54 &1613308870953886059
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &1613308870953886056
+--- !u!114 &187539099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
