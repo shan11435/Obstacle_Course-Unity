@@ -21,7 +21,7 @@ public class CollisionHandler : MonoBehaviour
                 break;
             //every other object that doesn't have either tags listed in the switch case
             default:
-                if(other.gameObject.tag != "hit")
+                if(other.gameObject.tag != "Hit")
                 {
                     hits--;
                     Debug.Log("You have " + hits + " life points");
