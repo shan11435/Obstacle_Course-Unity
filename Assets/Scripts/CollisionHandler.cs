@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -28,10 +29,34 @@ public class CollisionHandler : MonoBehaviour
                 }
                 if(hits == 0)
                 {
-                    Debug.Log("You lost the game");
+                    ReloadLevel();
                 }
                 break;
                 
         }
+    }
+
+    void LoadNextLevel()
+    {
+        //it's the level the player is currently in
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        //go the next level by adding one to the scene index
+        int nextSceneIndex = currentSceneIndex + 1;
+        //if the player is in the last scene that was created
+        if(nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+        {
+            //transport player back to scene index 0
+            nextSceneIndex = 0;
+        }
+        SceneManager.LoadScene(nextSceneIndex);
+    }
+
+    void ReloadLevel()
+    {
+        hits = 3;
+        Debug.Log("You have " + hits + " life points");
+        //goes back to the level the player is currently in
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
