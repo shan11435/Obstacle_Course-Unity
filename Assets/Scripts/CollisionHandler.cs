@@ -19,6 +19,7 @@ public class CollisionHandler : MonoBehaviour
             //if the object's tag name that's being collided is named finish
             case "Finish":
                 Debug.Log("Congratulations, you beat the course");
+                ReloadLevel();
                 break;
             //every other object that doesn't have either tags listed in the switch case
             default:
